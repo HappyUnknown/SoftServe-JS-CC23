@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!--That's HTML5-->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body onload="hello()">
+        <table>
+            <tr>
+                <td style="padding: 5px;"><input type="button" id="btnTask1" value="Task 1" onclick="viewTask1()"/></td>
+                <td style="padding: 5px;"><input type="button" id="btnTask2" value="Task 2" onclick="viewTask2()"/></td>
+                <td style="padding: 5px;"><input type="button" id="btnTask3" value="Task 3" onclick="viewTask3()"/></td>
+                <td style="padding: 5px;"><input type="button" id="btnTask4" value="Task 4" onclick="viewTask4()"/></td>
+                <td style="padding: 5px;"><input type="button" id="btnTask5" value="Task 5" onclick="viewTask5()"/></td>
+            </tr>
+        </table>
+        <div id="divTask1" title="Task 1" style="display: block;">
+            <table>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input id="btnInputAge" type="button" value="Input age" onclick="inputAge()"/>
+                    </td>
+                    <td style="padding: 5px;">
+                        <label id="lblUserAge"></label>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+        <div id="divTask2" title="Task 2" style="display: none;">
+            <table>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input id="btnInputRadius" type="button" value="Input radius" onclick="inputRadius()"/>
+                    </td>
+                    <td style="padding: 5px;">
+                        <label id="lblRoundArea"></label>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+        <div id="divTask3" title="Task 3" style="display: none;">
+            <table>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input id="btnInputDistance" type="button" value="Input distance" onclick="inputDistanceAndTime()"/>
+                    </td>
+                    <td style="padding: 5px;">
+                        <label id="lblSpeedRequired"></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divTask4" title="Task 4" style="display: none;">
+            <table>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input id="btnInputUSD" type="button" value="Input USD" onclick="inputUSDValue()"/>
+                    </td>
+                    <td style="padding: 5px;">
+                        <label id="lblEURTotal"></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divTask5" title="Task 5" style="display: none;">
+            <table>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input id="btnInputGBCapacity" type="button" value="Input GB capacity" onclick="inputGBCapacity()"/>
+                    </td>
+                    <td style="padding: 5px;">
+                        <label id="lbl820GBFileCapacity"></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
