@@ -1,0 +1,17 @@
+.btn-active
+{
+    background-color: forestgreen;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+}
+.btn-inactive
+{
+    background-color: lightgrey;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+}
+.lbl-task
+{
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}

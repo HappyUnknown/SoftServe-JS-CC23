@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body onload="hello()">
+        <table id="pnlToolbar">
+            <tr>
+                <td>
+                    <input id="btnInputTask1" value="Task 1" type="button" onclick="show_panel(1)"/>
+                </td>
+                <td>
+                    <input id="btnInputTask2" value="Task 2" type="button" onclick="show_panel(2)"/>
+                </td>
+                <td>
+                    <input id="btnInputTask3" value="Task 3" type="button" onclick="show_panel(3)"/>
+                </td>
+                <td>
+                    <input id="btnInputTask4" value="Task 4" type="button" onclick="show_panel(4)"/>
+                </td>
+                <td>
+                    <input id="btnInputTask5" value="Task 5" type="button" onclick="show_panel(5)"/>
+                </td>
+                <td>
+                    <input id="btnInputTask6" value="Task 6" type="button" onclick="show_panel(6)"/>
+                </td>
+                <td>
+                    <input id="btnInputTask7" value="Task 7" type="button" onclick="show_panel(7)"/>
+                </td>
+            </tr>
+        </table>
+        <table id="pnlTask1" title="Task 1">
+            <tr>
+                <td colspan="3">
+                    <label class="lbl-task">Input number 0 to 9 in order to get character</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="tbInputTask1" type="number"/>
+                </td>
+                <td>
+                    <input id="btnInputTask1" value="Redeem" type="button" class="btn-inactive" onclick="get_respective_char()"/>
+                </td>
+                <td>
+                    <label id="lblOutputTask1" class="lbl-task">NO_OUTPUT</label>
+                </td>
+            </tr>
+        </table>
+        <table id="pnlTask2" title="Task 2">
+            <tr>
+                <td colspan="3">
+                    <label class="lbl-task">Input year to know, if it's a leap</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="tbInputTask2" type="number"/>
+                </td>
+                <td>
+                    <input id="btnInputTask2" value="Redeem" type="button" class="btn-inactive" onclick="is_it_a_leap()"/>
+                </td>
+                <td>
+                    <label id="lblOutputTask2" class="lbl-task">NO_OUTPUT</label>
+                </td>
+            </tr>
+        </table>
+        <table id="pnlTask3" title="Task 3">
+            <tr>
+                <td colspan="3">
+                    <label class="lbl-task">Input a date to know, what day comes after</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="tbInputTask3" type="date"/>
+                </td>
+                <td>
+                    <input id="btnInputTask3" value="Redeem" type="button" class="btn-inactive" onclick="next_date()">
+                </td>
+                <td>
+                    <label id="lblOutputTask3" class="lbl-task">NO_OUTPUT</label>
+                </td>
+            </tr>
+        </table>
+        <table id="pnlTask4" title="Task 4">
+            <tr>
+                <td colspan="3">
+                    <label class="lbl-task" class="lbl-task">Input two numbers to get a sum</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="btnInputTask4" type="button" value="Redeem" class="btn-inactive" onclick="summarize()"/>
+                </td>
+                <td>
+                    <input id="tbInputTask4Min" type="number"/>
+                </td>
+                <td>
+                    <input id="tbInputTask4Max" type="number"/>
+                </td>
+                <td>
+                    <label id="lblOutputTask4" class="lbl-task">NO_OUTPUT</label>
+                </td>
+            </tr>
+        </table>
+        <table id="pnlTask5" title="Task 5">
+            <tr>
+                <td colspan="3">
+                    <label class="lbl-task">Enter a number to let me count its digits</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="tbInputTask5" type="number"/>
+                </td>
+                <td>
+                    <input id="btnInputTask5" value="Redeem" type="button" class="btn-inactive" onclick="count_digits()"/>
+                </td>
+                <td>
+                    <label id="lblOutputTask5" class="lbl-task">NO_OUTPUT</label>
+                </td>
+            </tr>
+        </table>
+        <table id="pnlTask6" title="Task 6">
+            <tr>
+                <td colspan="3">
+                    <label class="lbl-task">Enter 10 numbers</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="btnInputTask6" value="Generate'n'analyze numbers" type="button" class="btn-inactive" onclick="generate_n_analyze()">
+                </td>
+                <td>
+                    <label id="lblOutputTask6" class="lbl-task">NO_OUTPUT</label>
+                </td>
+            </tr>
+        </table>
+        <table id="pnlTask7" title="Task 7">
+            <tr>
+                <td colspan="3">
+                    <label class="lbl-task">Let's walk through weekdays</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="btnInputTask7" value="Let's get into it" type="button" class="btn-inactive" onclick="week_session()">
+                </td>
+                <td>
+                    <label id="lblOutputTask7" class="lbl-task">NO_OUTPUT</label>
+                </td>
+            </tr>
+        </table>
+        <script src="main.js"></script>
+    </body>
+</html>
