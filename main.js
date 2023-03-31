@@ -1,11 +1,9 @@
 function hideAll()
 {
    var parentID = document.getElementById('mainDiv');
-   var elements = parentID.getElementsByClassName('buttonTask1');
+   var elements = parentID.getElementsByClassName('taskTable');
    for(let i=0;i<elements.length;i++)
-   {
       elements[i].style.display = 'none'
-   }
 }
 function onloadfunc()
 {
