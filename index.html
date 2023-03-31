@@ -12,12 +12,16 @@
     <table>
         <tr>
             <td>
-                <input type="button" id="btnSetTask1" onclick="hideAll()"/>
+                <input type="button" id="btnSetTask1" onclick="showTaskById(1); processTask1();" value="TASK-1"/>
+            </td>
+            <td>
+                <input type="button" id="btnSetTask2" onclick="showTaskById(2); processTask2();" value="TASK-2"/>
             </td>
         </tr>
     </table>
     <div class="container" id="mainDiv">
-        <div id="tblTask1" onclick="alert('Its tblTask1')" class="taskTable">
+        <div id="tblTask1" onclick="alert('Its tblTask1')" class="taskTable"></div>
+        <div id="tblTask2" onclick="alert('Its tblTask2')" class="taskTable"></div>
     </div>
     <script src="main.js"></script>
 </body>
