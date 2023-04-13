@@ -37,4 +37,4 @@ class Clock
     }
 }
 clock = new Clock(0, 0, 0);
-setInterval(function () { document.getElementById('lblTime').innerHTML = clock.toString();  clock.tick(); }, 1000);
+setInterval(function () { document.querySelector('div > div #lblTime, div #lblTime').innerHTML = clock.toString();  clock.tick(); }, 1000);
