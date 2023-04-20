@@ -19,7 +19,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input id="tbModelKey" type="text" placeholder="Input model name"/>
+                        <input id="tbModelKey" type="text" placeholder="Input model name" list="dlModels"/>
                     </td>
                 </tr>
                 <tr>
@@ -27,6 +27,7 @@
                         <input id="btnModelSearch" type="button" value="🔍"/>
                     </td>
                 </tr>
+                <datalist id="dlModels"></datalist>
             </table>
         </div>
         <table id="tblCars" class="table">
@@ -68,36 +69,36 @@
                 <tr>
                     <td>Model</td>
                     <td>
-                        <input id="tbModelname" type="text"/>
+                        <input id="tbModelname" type="text" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>Year</td>
                     <td>
-                        <input id="ypYear" type="date"/>
+                        <input id="ypYear" type="date" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>Price</td>
                     <td>
-                        <input id="tbPrice" type="number"/>
+                        <input id="tbPrice" type="number" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>Color</td>
                     <td>
-                        <input id="cpPaint" type="color"/>
+                        <input id="cpPaint" type="color" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>Status</td>
                     <td>
-                        <input id="tbStatus" type="text"/>
+                        <select id="ddlStatus" required></select>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="button" id="btnAddItem" onclick="alert('!!!');" value="+">
+                        <input type="button" id="btnAddItem" value="➕">
                     </td>
                 </tr>
             </table>

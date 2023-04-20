@@ -1,3 +1,12 @@
+//Filling dropdownlist
+document.getElementById("ddlStatus").innerHTML += 
+`
+<option></option>
+<option>Delivered</option>
+<option>Taxing</option>
+<option>Taxed</option>
+`
+//
 cars = []
 function clearTable()
 {
@@ -6,7 +15,7 @@ function clearTable()
 function fillRows()
 {
     clearTable();
-    for(let i=0;i<cars.length;i++)
+    for(let i=0; i<cars.length; i++)
     {
         document.getElementById("tblCarsBody").innerHTML += 
         `
@@ -23,27 +32,39 @@ function fillRows()
 }
 function addRow()
 {   
-    nextID = 1
-    if(cars.length > 0)
-        nextID = cars[cars.length - 1].ID + 1;
-    let row = 
+    let modelname = document.getElementById("tbModelname").value;
+    let year = document.getElementById("ypYear").value;
+    let price = document.getElementById("tbPrice").value;
+    let color = document.getElementById("cpPaint").value;
+    let status = document.getElementById("ddlStatus").value;
+    fullfilled = modelname.length > 0 && year.length > 0 && price.length > 0 && color.length > 0 && status.length > 0;
+    if(fullfilled)
     {
-        ID: nextID,
-        Model: document.getElementById("tbModelname").value,
-        Year: document.getElementById("ypYear").value,
-        Price: document.getElementById("tbPrice").value,
-        Color: document.getElementById("cpPaint").value,
-        Status: document.getElementById("tbStatus").value 
+        nextID = 1
+        if(cars.length > 0)
+            nextID = cars[cars.length - 1].ID + 1;
+        let row =
+        {
+            ID: nextID,
+            Model: document.getElementById("tbModelname").value,
+            Year: document.getElementById("ypYear").value,
+            Price: document.getElementById("tbPrice").value,
+            Color: document.getElementById("cpPaint").value,
+            Status: document.getElementById("ddlStatus").value
+        }
+        cars.push(row);
+        document.getElementById("dlModels").innerHTML += `<option>${row.Model}</option>`
     }
-    cars.push(row);
-
+    else
+    {
+        alert("Requirements were not met");
+    }
     fillRows();
-    alert('!!!');
 }
 function clearCars()
 {
     clearTable();
-    cars.pop();
+    cars.length = 0;
 }
 function getElementByModel()
 {
@@ -65,7 +86,6 @@ function getElementByModel()
             `        
         }
     }
-    alert("No such modelname");
 }
 
 const searchBTN = document.getElementById("btnModelSearch");
